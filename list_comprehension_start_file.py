@@ -37,7 +37,9 @@ for i in original_list:
 # 1 Using a list comprehension, create a new list called "newlist" out of the list "numbers", 
 # which contains only the positive numbers from the list, as integers.
 
-numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+#numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+#newlist = [int(x) for x in numbers if x > 0]
+#print(newlist)
 
 
 
@@ -45,8 +47,10 @@ numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 ## 2 create a list of integers which specify the length of each word in
 ## a sentence except for the word 'the'
 
-sentence = "the quick brown fox jumps over the lazy dog"
-words = sentence.split()
+#sentence = "the quick brown fox jumps over the lazy dog"
+#words = sentence.split()
+#length = [len(words) for words in sentence if words != 'the']
+#print(length)
 
 
 
@@ -54,10 +58,9 @@ words = sentence.split()
 ## Contruct a list of the names of vehicles with weight below 5000 kilograms. 
 ## In the same list comprehension make the key names all upper case.
 
-dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, 
-"Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+#dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
 
-
+#weight = [i for i in if dict[1]>5000
 
 
 ## Find all the numbers from 1 to 1000 that have a 4 in them
@@ -66,12 +69,23 @@ dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400,
 
 ## count how many times the word 'the' appears in the text file - 'sometext.txt'
 
+#thisfile = open('sometext.txt','r')
+#return1 = [len(i.rstrip("\n")) for i in thisfile if i in 'the']
+#print(return1)
+
+thisfile = open('sometext.txt','r')
+return1 = [len(word) for word in thisfile if word in 'the']
+print(return1)
+
+
 
 
 ## Extract the numbers from the following phrase ##
 
-phrase = 'In 1984 there were 13 instances of a protest with over 1000 people attending. On average there were 15 reported injuries at each " +
-"event, with about 3 or 4 that were classifled as serious per event.'
+#phrase = 'In 1984 there were 13 instances of a protest with over 1000 people attending. On average there were 15 reported injuries at each ' + "event, with about 3 or 4 that were classifled as serious per event."
+
+#numbers = [x for x in phrase if x.isdigit()]
+#print(numbers)
 
 
 
