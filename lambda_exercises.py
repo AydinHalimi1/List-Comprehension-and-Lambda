@@ -96,7 +96,17 @@ Elements of the said list that contain specific substring:
 []
 
 '''
+listwords = ['red', 'black', 'white', 'green', 'orange']
 
+sub = 'ack'
+
+substrings = list(filter(lambda x: sub in x, listwords))
+print(substrings)
+
+sub2 = 'abc'
+
+otherstrings = list(filter(lambda x: sub2 in x, listwords))
+print(otherstrings)
 
 
 
@@ -107,10 +117,17 @@ check whether a given string contains a capital letter, a lower case letter, a n
 (This is like a password verification function, HINT: Python function 'any' may be useful)
 '''
 
-password = 'LoL123'
+password = input('Enter your password: ')
 
-check
+checks =  [lambda x: any(x.isupper() for x in password),
+          lambda x: any(x.islower() for x in password),
+          lambda x: any(x.isdigit() for x in password),
+          lambda x: len(password) >= 8]
 
+if all(check(password) for check in checks):
+    print("Password is Valid")
+else:
+    print("Not a valid Password")
 
 
 
@@ -125,3 +142,6 @@ original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sci
 # [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 '''
 
+original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+newlist = sorted(original_scores, key=lambda x: x[1])
+print(newlist)
